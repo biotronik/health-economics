@@ -1,5 +1,8 @@
 $( document ).ready(function() {
-  // Handler for .ready() called.
+  $(".nav .nav-link").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).addClass("active");
+ });
 });
 
 function myFunction() {
