@@ -79,3 +79,6 @@ theme: economics
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   ? type
+
+# webpack:
+#   entry: "themes/economics/source/js/main.js"
