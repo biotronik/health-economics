@@ -1,5 +1,6 @@
 ---
 title: CPT Codes
+layout: cpt-codes
 date: 2018-09-23 09:36:02
 permalink: /tools/cpt/
 ---
