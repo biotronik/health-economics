@@ -39,6 +39,9 @@ $(document).ready(function() {
         data: "device_description"
       },
       {
+        data: "device_category"
+      },
+      {
         data: "c_code"
       },
       {
