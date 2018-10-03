@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  var table = $("#ccode").DataTable({
+  var table = $("#hospital-finder").DataTable({
     autoWidth: false,
-    ajax: "../../data/ccode.txt",
+    ajax: "../../data/hospital-finder.txt",
     columns: [{
         className: "details-control",
         orderable: false,
@@ -9,25 +9,7 @@ $(document).ready(function () {
         defaultContent: ""
       },
       {
-        data: "model_number"
-      },
-      {
-        data: "device_description"
-      },
-      {
-        data: "c_code"
-      },
-      {
-        data: "device_category",
-        visible: false
-      },
-      {
-        data: "description",
-        visible: false
-      },
-      {
-        data: "status",
-        visible: false
+        data: "Hospital Name"
       }
     ],
     order: [
@@ -36,7 +18,7 @@ $(document).ready(function () {
   });
 
   // Add event listener for opening and closing details
-  $("#ccode tbody").on("click", "td.details-control", function () {
+  $("#hospital-finder tbody").on("click", "td.details-control", function () {
     var tr = $(this).closest("tr");
     var row = table.row(tr);
 

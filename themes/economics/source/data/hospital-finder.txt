@@ -1,0 +1,32 @@
+{
+  "data": [{
+    "Provider ID": 20026,
+    "Hospital Name": "ALASKA NATIVE MEDICAL CENTER",
+    "Address": "4315 DIPLOMACY DR",
+    "City": "ANCHORAGE",
+    "State": "AK",
+    "ZIP Code": 99508,
+    "County Name": "ANCHORAGE",
+    "Phone Number": 9075632662,
+    "Hospital Type": "Acute Care Hospitals",
+    "Hospital Ownership": "Government - Federal",
+    "Emergency Services": "TRUE",
+    "Meets criteria for meaningful use of EHRs": "TRUE",
+    "Hospital overall rating": 2,
+    "Hospital overall rating footnote": "This hospital’s star rating only includes data reported on inpatient services",
+    "Mortality national comparison": "Same as the national average",
+    "Mortality national comparison footnote": "",
+    "Safety of care national comparison": "Below the national average",
+    "Safety of care national comparison footnote": "",
+    "Readmission national comparison": "Above the national average",
+    "Readmission national comparison footnote": "",
+    "Patient experience national comparison": "Below the national average",
+    "Patient experience national comparison footnote": "",
+    "Effectiveness of care national comparison": "Same as the national average",
+    "Effectiveness of care national comparison footnote": "",
+    "Timeliness of care national comparison": "Below the national average",
+    "Timeliness of care national comparison footnote": "",
+    "Efficient use of medical imaging national comparison": "Not Available",
+    "Efficient use of medical imaging national comparison footnote": "There are too few measures or measure groups reported to calculate a star rating or measure group score"
+  }]
+}
