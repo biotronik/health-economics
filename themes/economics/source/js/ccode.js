@@ -2,63 +2,66 @@
 /* Formatting function for row details - modify as you need */
 function format(d) {
   // `d` is the original data object for the row
-  return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-    '<tr>' +
-    '<td>HCPCS Level II Description:</td>' +
-    '<td>' + d.description + '</td>' +
-    '</tr>' +
-    '</table>';
+  return (
+    '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+    "<tr>" +
+    "<td>HCPCS Level II Description:</td>" +
+    "<td>" +
+    d.description +
+    "</td>" +
+    "</tr>" +
+    "</table>"
+  );
 }
 
-$(document).ready(function () {
-  var table = $('#ccode').DataTable({
+$(document).ready(function() {
+  var table = $("#ccode").DataTable({
     // "columnDefs": [{
     //   "width": "24%",
     //   "targets": [1, 2, 3, 4]
     // }],
-    "autoWidth": false,
-    "ajax": "../../data/ccode.txt",
-    "columns": [{
-        "className": 'details-control',
-        "orderable": false,
-        "data": null,
-        "defaultContent": ''
+    autoWidth: false,
+    ajax: "../../data/ccode.txt",
+    columns: [
+      {
+        className: "details-control",
+        orderable: false,
+        data: null,
+        defaultContent: ""
       },
       {
-        "data": "device_category"
+        data: "status"
       },
       {
-        "data": "device_name"
+        data: "model_number"
       },
       {
-        "data": "model_number"
+        data: "device_description"
       },
       {
-        "data": "c_code"
+        data: "c_code"
       },
       {
-        "data": "description",
-        "visible": false
+        data: "description",
+        visible: false
       }
     ],
-    "order": [
-      [1, 'asc']
-    ]
+    order: [[1, "asc"]]
   });
 
   // Add event listener for opening and closing details
-  $('#ccode tbody').on('click', 'td.details-control', function () {
-    var tr = $(this).closest('tr');
+  $("#ccode tbody").on("click", "td.details-control", function() {
+    var tr = $(this).closest("tr");
     var row = table.row(tr);
 
     if (row.child.isShown()) {
       // This row is already open - close it
       row.child.hide();
-      tr.removeClass('shown');
+      tr.removeClass("shown");
     } else {
       // Open this row
       row.child(format(row.data())).show();
-      tr.addClass('shown');
+      tr.addClass("shown");
     }
   });
 });
