@@ -3,20 +3,16 @@
   font-size .8rem
 
 
-td.details-control {
-    background: url('../images/details_open.svg') no-repeat center center;
-    cursor: pointer;
-}
-tr.shown td.details-control {
-    background: url('../images/details_close.svg') no-repeat center center;
-}
+td.details-control
+    background url('../images/details_open.svg') no-repeat center center
+    cursor pointer
+    padding 0 .6rem !important
 
-.datatables__text {
-    font-size: .8rem;
-}
+tr.shown td.details-control
+    background url('../images/details_close.svg') no-repeat center center
+
+.datatables__text
+    font-size: .8rem
 
 .table td, .table th
     padding .75rem .2rem
-
-td.details-control
-    padding 0 .6rem
