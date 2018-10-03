@@ -6,3 +6,7 @@ function myFunction() {
     x.style.display = "none";
   }
 }
+
+$(window).on("load", function() {
+  $("#exampleModal").modal("show");
+});

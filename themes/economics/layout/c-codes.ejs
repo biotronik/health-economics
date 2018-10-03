@@ -1,24 +1,13 @@
 <div class="container">
     <h3 class="text-center">C-CODE Search Tool</h3>
-    <p class='searchtool__text'>Disclaimer: Reimbursement related information provided by BIOTRONIK is obtained from
-        third party
-        sources. This information is provided for the convenience of the health care provider only and does not
-        constitute reimbursement, legal or compliance advice. Billing & coding information is subject to
-        frequent and unexpected change, therefore BIOTRONIK recommends that users refer to the information
-        sources listed to verify accuracy prior to acting on the information provided herein. BIOTRONIK makes
-        no representation or warranty regarding this information or its accuracy, completeness or applicability
-        and assumes no responsibility for updating this information. BIOTRONIK specifically disclaims liability
-        or responsibility for the results or consequences of any actions taken in reliance on information in
-        this document. BIOTRONIK strongly encourages health care providers to submit accurate and appropriate
-        claims for services and recommends that you consult directly with payers (e.g. the Centers for Medicare
-        and Medicaid Services (CMS)), certified reimbursement coding professionals, other reimbursement
-        experts, and/or legal counsel regarding all coding, coverage, and payment issues.</p>
+
     <table id="ccode" class="table table-striped table-bordered datatables__text" width="100%">
         <thead>
             <tr>
                 <th></th>
                 <th>Model Number</th>
                 <th>Device Description</th>
+                <th>Device Category</th>
                 <th>C&#8209;Code</th>
             </tr>
         </thead>
@@ -27,10 +16,47 @@
                 <th></th>
                 <th>Model Number</th>
                 <th>Device Description</th>
+                <th>Device Category</th>
                 <th>C&#8209;Code</th>
             </tr>
         </tfoot>
     </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="exampleModalLabel">DISCLAIMER</h5>
+            </div>
+            <div class="modal-body">
+                <p class='searchtool__text'>Reimbursement related information provided by BIOTRONIK is
+                    obtained from
+                    third party
+                    sources. This information is provided for the convenience of the health care provider only and does
+                    not
+                    constitute reimbursement, legal or compliance advice. Billing & coding information is subject to
+                    frequent and unexpected change, therefore BIOTRONIK recommends that users refer to the information
+                    sources listed to verify accuracy prior to acting on the information provided herein. BIOTRONIK
+                    makes
+                    no representation or warranty regarding this information or its accuracy, completeness or
+                    applicability
+                    and assumes no responsibility for updating this information. BIOTRONIK specifically disclaims
+                    liability
+                    or responsibility for the results or consequences of any actions taken in reliance on information
+                    in
+                    this document. BIOTRONIK strongly encourages health care providers to submit accurate and
+                    appropriate
+                    claims for services and recommends that you consult directly with payers (e.g. the Centers for
+                    Medicare
+                    and Medicaid Services (CMS)), certified reimbursement coding professionals, other reimbursement
+                    experts, and/or legal counsel regarding all coding, coverage, and payment issues.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -45,14 +71,6 @@
             "<td>Status:</td>" +
             "<td>" +
             d.status +
-            "</td>" +
-            "</tr>" +
-            // End of Field
-            // Start of Field
-            "<tr>" +
-            "<td>Device Category:</td>" +
-            "<td>" +
-            d.device_category +
             "</td>" +
             "</tr>" +
             // End of Field

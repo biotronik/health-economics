@@ -1,32 +1,63 @@
 <div class="container">
     <h3 class="text-center">Hospital Finder Search Tool</h3>
-    <p class='searchtool__text'>Disclaimer: Reimbursement related information provided by BIOTRONIK is obtained from
-        third party
-        sources. This information is provided for the convenience of the health care provider only and does not
-        constitute reimbursement, legal or compliance advice. Billing & coding information is subject to
-        frequent and unexpected change, therefore BIOTRONIK recommends that users refer to the information
-        sources listed to verify accuracy prior to acting on the information provided herein. BIOTRONIK makes
-        no representation or warranty regarding this information or its accuracy, completeness or applicability
-        and assumes no responsibility for updating this information. BIOTRONIK specifically disclaims liability
-        or responsibility for the results or consequences of any actions taken in reliance on information in
-        this document. BIOTRONIK strongly encourages health care providers to submit accurate and appropriate
-        claims for services and recommends that you consult directly with payers (e.g. the Centers for Medicare
-        and Medicaid Services (CMS)), certified reimbursement coding professionals, other reimbursement
-        experts, and/or legal counsel regarding all coding, coverage, and payment issues.</p>
     <table id="hospital-finder" class="table table-striped table-bordered datatables__text" width="100%">
         <thead>
             <tr>
                 <th></th>
                 <th>Hospital Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
                 <th></th>
                 <th>Hospital Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
             </tr>
         </tfoot>
     </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="exampleModalLabel">Disclaimer:</h5>
+            </div>
+            <div class="modal-body">
+                <p class='searchtool__text'>Reimbursement related information provided by BIOTRONIK is
+                    obtained from
+                    third party
+                    sources. This information is provided for the convenience of the health care provider only and does
+                    not
+                    constitute reimbursement, legal or compliance advice. Billing & coding information is subject to
+                    frequent and unexpected change, therefore BIOTRONIK recommends that users refer to the information
+                    sources listed to verify accuracy prior to acting on the information provided herein. BIOTRONIK
+                    makes
+                    no representation or warranty regarding this information or its accuracy, completeness or
+                    applicability
+                    and assumes no responsibility for updating this information. BIOTRONIK specifically disclaims
+                    liability
+                    or responsibility for the results or consequences of any actions taken in reliance on information
+                    in
+                    this document. BIOTRONIK strongly encourages health care providers to submit accurate and
+                    appropriate
+                    claims for services and recommends that you consult directly with payers (e.g. the Centers for
+                    Medicare
+                    and Medicaid Services (CMS)), certified reimbursement coding professionals, other reimbursement
+                    experts, and/or legal counsel regarding all coding, coverage, and payment issues.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -38,33 +69,113 @@
             '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
             // Start of Field
             "<tr>" +
-            "<td>Address:</td>" +
+            "<td>Provider ID:</td>" +
             "<td>" +
-            d.Address +
+            d.provider_id +
             "</td>" +
             "</tr>" +
             // End of Field
             // Start of Field
             "<tr>" +
-            "<td>City:</td>" +
+            "<td>County Name:</td>" +
             "<td>" +
-            d.City +
+            d.county_name +
             "</td>" +
             "</tr>" +
             // End of Field
             // Start of Field
             "<tr>" +
-            "<td>State:</td>" +
+            "<td>Phone:</td>" +
             "<td>" +
-            d.State +
+            d.phone +
             "</td>" +
             "</tr>" +
             // End of Field
             // Start of Field
             "<tr>" +
-            "<td>Zip Code:</td>" +
+            "<td>Hospital Type:</td>" +
             "<td>" +
-            d["ZIP Code"] +
+            d.hospital_type +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Hospital Ownership: </td>" +
+            "<td>" +
+            d.hospital_ownership +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Emergency Services:</td>" +
+            "<td>" +
+            d.emergency_services +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Meets Meaningful Use Criteria:</td>" +
+            "<td>" +
+            d.meets_meaningful_use_criteria +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Overall Ratings:</td>" +
+            "<td>" +
+            d.overall_ratings +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Comparative Mortality:</td>" +
+            "<td>" +
+            d.comparative_mortality +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Comparative Safety:</td>" +
+            "<td>" +
+            d.comparative_safety +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Comparative Readmission:</td>" +
+            "<td>" +
+            d.comparative_readmission +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Comparative Patient Experience:</td>" +
+            "<td>" +
+            d.comparative_pt_experience +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Comparative Care Effectiveness:</td>" +
+            "<td>" +
+            d.comparative_care_effect +
+            "</td>" +
+            "</tr>" +
+            // End of Field
+            // Start of Field
+            "<tr>" +
+            "<td>Comparative Timeliness:</td>" +
+            "<td>" +
+            d.comparative_timeliness +
             "</td>" +
             "</tr>" +
             // End of Field

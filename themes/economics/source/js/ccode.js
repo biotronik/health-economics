@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var table = $("#ccode").DataTable({
+    pagingType: "full",
     autoWidth: false,
     ajax: "../../data/ccode.txt",
     columns: [{
@@ -15,11 +16,10 @@ $(document).ready(function () {
         data: "device_description"
       },
       {
-        data: "c_code"
+        data: "device_category",
       },
       {
-        data: "device_category",
-        visible: false
+        data: "c_code"
       },
       {
         data: "description",
