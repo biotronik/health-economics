@@ -8,5 +8,5 @@ function myFunction() {
 }
 
 $(window).on("load", function() {
-  $("#exampleModal").modal("show");
+  $("#disclaimerModal").modal("show");
 });
