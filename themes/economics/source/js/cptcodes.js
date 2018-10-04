@@ -10,13 +10,14 @@ $(document).ready(function () {
         defaultContent: ""
       },
       {
-        data: "procedure_type"
-      },
-      {
         data: "cpt_code"
       },
       {
         data: "cpt_code_description"
+      },
+      {
+        data: "procedure_type",
+        visible: false
       },
       {
         data: "primary_category",
